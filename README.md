@@ -1,4 +1,4 @@
-## Hacker's Monitor for XFCE
+## Hacker's Monitor for XFCE (MBps, KBps)
 
 ### Screenshot and doc
 

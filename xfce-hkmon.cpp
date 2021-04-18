@@ -398,7 +398,7 @@ std::istream& operator>>(std::istream& in, Network::Interface& ifz)
 std::ostream& operator<<(std::ostream& out, const Network::Bandwidth& speed)
 {
     char unit = (speed.unit == Network::Bandwidth::Unit::byte)? 'b' : 'B';
-    if (speed.perSecond < MB_i) return out << (speed.perSecond / 1000)/8 << " K" << unit << "ps";
+    if (speed.perSecond < 10240000) return out << (speed.perSecond / 1024)/8 << " K" << unit << "ps";
     return out << std::fixed << std::setprecision(2) << (speed.perSecond / MB_f)/8 << " M" << unit << "ps";
 }
 
